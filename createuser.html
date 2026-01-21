@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create User</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #d0f0fd; /* bg-info-subtle */
+    }
+    .form-container {
+      background-color: #d0f0fd; /* match navbar accent */
+      min-height: calc(100vh - 56px); /* full page minus navbar height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .btn-black {
+      background-color: #000;
+      color: #fff;
+    }
+    .btn-black:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-info-subtle shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="dashboard.html">
+        <i class="fa-solid fa-brain" style="margin-right: 8px;"></i>
+        AI Recruitment
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-users" style="margin-right: 8px;"></i> User Management
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="createuser.html"><i class="fas fa-user-plus" style="margin-right: 8px;"></i> Create User</a></li>
+              <li><a class="dropdown-item" href="manageuser.html"><i class="fas fa-user-cog" style="margin-right: 8px;"></i> Manage User</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-briefcase" style="margin-right: 8px;"></i> Jobs
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="createjob.html"><i class="fas fa-plus-circle" style="margin-right: 8px;"></i> Create Jobs</a></li>
+              <li><a class="dropdown-item" href="managejob.html"><i class="fas fa-tasks" style="margin-right: 8px;"></i> Manage Jobs</a></li>
+            </ul>
+          </li>
+           <li class="nav-item ms-3">
+          <button class="btn btn-black" id="logoutBtn">
+            <i class="fas fa-sign-out-alt me-1"></i> Logout
+          </button>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="form-container">
+    <form action="dashboard.html" class="w-100" style="max-width: 600px;">
+      <h2 class="mb-4 text-center">Fill User Details</h2>
+
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="username" class="form-label">Username (optional)</label>
+        <input type="text" class="form-control" id="username">
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <select class="form-select" id="role" required>
+          <option value="">Select Role</option>
+          <option value="admin">Admin</option>
+          <option value="recruiter">Employee</option>
+        
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number (optional)</label>
+        <input type="tel" class="form-control" id="phone">
+      </div>
+
+      <button type="submit" class="btn btn-black w-100"><i class="fas fa-user-plus" style="margin-right: 8px;"></i>Create User</button>
+    </form>
+  </div>
+  <script>
+  document.getElementById('logoutBtn').addEventListener('click', function() {
+    window.location.href = 'index.html'; // redirect to landing page
+  });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
