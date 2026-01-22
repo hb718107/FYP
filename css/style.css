@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.dropdown-item:hover {
+  color: #000 !important;
+  background-color: #5EEAD4;
+}
+.navbar {
+  border-radius: 0 0 16px 16px;
+}
+.card {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
